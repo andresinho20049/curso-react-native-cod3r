@@ -1,4 +1,5 @@
 import { StyleSheet, View } from "react-native"
+import Mega from "../mega/Mega"
 import { Quadrado } from "./components/Quadrado"
 
 
@@ -10,6 +11,7 @@ export const Flexbox = () => {
             <Quadrado color={'#dd22c1'} />
             <Quadrado color={'#8312ed'} />
             <Quadrado color={'#36c9a7'} />
+            <Mega qtdeNumero={7}/>
         </View>
     )
 }

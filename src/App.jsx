@@ -7,6 +7,7 @@ import { Button, Icon } from "@rneui/themed";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { UsersProvider } from "./context/UsersContext";
 import { Flexbox } from "./views/layout_study/Flexbox";
+import Mega from "./views/mega/Mega";
 
 const Stack = createNativeStackNavigator();
 
@@ -32,17 +33,17 @@ const App = () => {
                                     title: "Lista de Usuários",
                                     headerRight: () => (
                                         <>
-                                        <Button
-                                            type="clear"
-                                            icon={<Icon name="add" size={22} color="#fff" />}
-                                            onPress={() => navigation.navigate("UserForm")}
+                                            <Button
+                                                type="clear"
+                                                icon={<Icon name="add" size={22} color="#fff" />}
+                                                onPress={() => navigation.navigate("UserForm")}
                                             />
-                                        <Button
-                                            type="clear"
-                                            icon={<Icon name="wysiwyg" size={22} color="#fff" />}
-                                            onPress={() => navigation.navigate("Flexbox")}
+                                            <Button
+                                                type="clear"
+                                                icon={<Icon name="wysiwyg" size={22} color="#fff" />}
+                                                onPress={() => navigation.navigate("Flexbox")}
                                             />
-                                            </>
+                                        </>
 
                                     )
                                 }
