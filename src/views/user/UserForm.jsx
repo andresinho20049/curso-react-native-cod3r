@@ -1,7 +1,7 @@
 import { Button } from "@rneui/themed";
 import React, { useContext, useState } from "react";
 import { StyleSheet, Text, TextInput, View } from "react-native";
-import UsersContext from "../context/UsersContext";
+import UsersContext from "../../context/UsersContext";
 
 export default ({ route, navigation }) => {
     const [user, setUser] = useState(route.params ? route.params : {});

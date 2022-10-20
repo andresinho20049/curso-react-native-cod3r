@@ -1,7 +1,7 @@
+import { Avatar, Button, Icon, ListItem } from "@rneui/base";
 import React, { useContext } from "react";
-import { Avatar, Button, ListItem, Icon } from "@rneui/base";
 import { Alert, FlatList, View } from 'react-native';
-import UsersContext from "../context/UsersContext";
+import UsersContext from "../../context/UsersContext";
 
 export default props => {
 

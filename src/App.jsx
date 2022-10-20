@@ -1,11 +1,12 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import UserForm from "./views/UserForm";
-import UserList from "./views/UserList";
+import UserForm from "./views/user/UserForm";
+import UserList from "./views/user/UserList";
 import { Button, Icon } from "@rneui/themed";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { UsersProvider } from "./context/UsersContext";
+import { Flexbox } from "./views/layout_study/Flexbox";
 
 const Stack = createNativeStackNavigator();
 
@@ -30,16 +31,24 @@ const App = () => {
                                 return {
                                     title: "Lista de Usuários",
                                     headerRight: () => (
+                                        <>
                                         <Button
                                             type="clear"
                                             icon={<Icon name="add" size={22} color="#fff" />}
                                             onPress={() => navigation.navigate("UserForm")}
-                                        />
+                                            />
+                                        <Button
+                                            type="clear"
+                                            icon={<Icon name="wysiwyg" size={22} color="#fff" />}
+                                            onPress={() => navigation.navigate("Flexbox")}
+                                            />
+                                            </>
 
                                     )
                                 }
                             }} />
                         <Stack.Screen name="UserForm" component={UserForm} />
+                        <Stack.Screen name="Flexbox" component={Flexbox} />
                     </Stack.Navigator>
                 </NavigationContainer>
             </UsersProvider>
